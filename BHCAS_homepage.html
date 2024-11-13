@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Health Care Services</title>
+</head>
+<body>
+
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+            <a class="navbar-brand" href="index.html">
+                <img src="michael.jpg" width="50" height="50" class="rounded-circle" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-light" href="#">Menu 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Menu 2</a>
+                    </li>
+                </ul>
+                <button class="btn btn-warning">Sample Logout</button>
+            </div>
+        </nav>
+        <div class="content border border-danger p-3">
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                        Hello <strong>Michael!</strong> notifs mo kel may nag chat.
+                        <button type="button" class="close" data-dismiss="alert">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-header">juvyen clinic</div>
+                        <img src="clinic.png" class="card-img-top" />
+                        <div class="card-body">
+                            <p class="card-text">Book an Appointment</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" data-toggle="modal" data-target="#valirModal">Book now</a>
+                        </div>
+                    </div>
+                </div>
+    <div class="container">
+        <h1 class="mt-5">Health Care Services</h1>
+        <ul class="list-group mt-3">
+            <li class="list-group-item"><a href="#requirements">List of Health Care Services</a></li>
+            <li class="list-group-item"><a href="#procedures">Requirements and Procedures</a></li>
+            <li class="list-group-item"><a href="#form">Fill Out Form</a></li>
+        </ul>
+
+        <div id="requirements" class="mt-5">
+            <h2>Requirements and Procedures</h2>
+            <p>Details about the requirements and procedures for accessing health care services.</p>
+        </div>
+
+        <div id="form" class="mt-5">
+            <h2>Fill Out Form</h2>
+            <form action="connection.php" method="push">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your full name" name="res_name_id">
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address" placeholder="Enter your address" name="address_id">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Date and Time</label>
+                    <input type="datetime" class="form-control" id="datetime" placeholder="Enter your preferred date and time " name="pref_date_time">
+                </div>
+
+                <div class="form-group">
+                    <label for="sex">Sex</label>
+                    <select class="form-control" id="service" name="sex">
+                        <option>Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="text" class="form-control" id="age" placeholder="Age" name="age">
+                </div>
+
+                <div class="form-group">
+                    <label for="Mobile Number">Mobile Number</label>
+                    <input type="text" class="form-control" id="age" placeholder="Active mobile number ex: +639********" name="mobile_no">
+                </div>
+
+                <style> /*for upload image section*/
+                    form {
+                        display: inline-block;
+                        margin-top: 20px;
+                    }
+                    input[type="file"] {
+                        margin: 10px 0;
+                    }
+                    img {
+                        margin-top: 20px;
+                        max-width: 300px;
+                        max-height: 300px;
+                        display: none; /* Hide the image initially */
+                    }
+                </style>
+
+                <form id="imageUploadForm">
+                    <label for="image">Select an image to upload:</label><br>
+                    <input type="file" id="image" name="valid_id" accept="image/*" required><br>
+                </form>
+            
+                <img id="preview" alt="Image Preview">
+
+                <script>
+                    document.getElementById('imageUploadForm').addEventListener('submit', function(event) {
+                        event.preventDefault(); // Prevent the form from submitting
+            
+                        const fileInput = document.getElementById('image');
+                        const file = fileInput.files[0]; // Get the selected file
+            
+                        if (file) {
+                            const reader = new FileReader();
+                            reader.onload = function(e) {
+                                const previewImage = document.getElementById('preview');
+                                previewImage.src = e.target.result; // Set the image source to the file data
+                                previewImage.style.display = 'block'; // Show the image
+                            };
+                            reader.readAsDataURL(file); // Read the file as a data URL
+                        }
+                    });
+                </script>
+
+                <div class="form-group">
+                    <label for="service">Select Service</label>
+                    <select class="form-control" id="service">
+                        <option>Medication</option>
+                        <option>Vitamins</option>
+                        <option>Supplements</option>
+                        <option>Immunization</option>
+                        <option>Medical Assistance</option>
+                        <option>Health Nutrition</option>
+                        <option>Health Education and Sessions</option>
+                        <option>Maternal Health</option>
+                        <option>Children's Health Monitoring</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
