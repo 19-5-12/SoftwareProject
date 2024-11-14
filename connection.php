@@ -1,7 +1,7 @@
 <?php
  $servername = "localhost";
  $username = "root";
- $password = "admin";
+ $password = "";
  $dbname = "bhcas.db";
 
  $conn = new mysqli('localhost', 'root', '', 'bhcas.db')
@@ -25,7 +25,7 @@ else{
     $stmt = $conn->prepare("INSERT INTO resident_form (res_name, address, pref_date, bio_sex, age,
     mobile_no, med_service, valid_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
     
-    $stmt->bind_param("ssssssss", $res_name, $address, $pref_date, $bio_sex, $age,
+    $stmt->bind_param("sssssssss", $res_name, $address, $pref_date, $bio_sex, $age,
     $mobile_no, $med_service, $valid_id); // "ss" indicates two string parameters
 
     $stmt->execute();
