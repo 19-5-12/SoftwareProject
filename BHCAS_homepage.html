@@ -68,22 +68,39 @@
             <form action="connection.php" method="push">
                 <div class="form-group">
                     <label for="name">Full Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter your full name" name="res_name_id">
+                    <input type="text" class="form-control" id="name" placeholder="Enter your full name" name="res_name" required>
                 </div>
                 
                 <div class="form-group">
                     <label for="address">Address</label>
-                    <input type="text" class="form-control" id="address" placeholder="Enter your address" name="address_id">
+                    <input type="text" class="form-control" id="address" placeholder="Enter your address" name="address" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Date and Time</label>
-                    <input type="datetime" class="form-control" id="datetime" placeholder="Enter your preferred date and time " name="pref_date_time">
+                    <label for="email">Date</label>
+                    <input type="date" class="form-control" id="date" placeholder="Ex: 2021/11/11" name="pref_date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sex">Time</label>
+                    <select class="form-control" id="service" name="pref_time" required>
+                        <option>Select Time</option>
+                        <option>8:00 am</option>
+                        <option>9:00 am</option>
+                        <option>10:00 am</option>
+                        <option>11:00 am</option>
+                        <option>12:00 pm</option>
+                        <option>1:00 pm</option>
+                        <option>2:00 pm</option>
+                        <option>3:00 pm</option>
+                        <option>4:00 pm</option>
+                        <option>5:00 pm</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
                     <label for="sex">Sex</label>
-                    <select class="form-control" id="service" name="sex">
+                    <select class="form-control" id="service" name="sex" required>
                         <option>Select</option>
                         <option>Male</option>
                         <option>Female</option>
@@ -92,12 +109,12 @@
 
                 <div class="form-group">
                     <label for="age">Age</label>
-                    <input type="text" class="form-control" id="age" placeholder="Age" name="age">
+                    <input type="text" class="form-control" id="age" placeholder="Age" name="age" required>
                 </div>
 
                 <div class="form-group">
                     <label for="Mobile Number">Mobile Number</label>
-                    <input type="text" class="form-control" id="age" placeholder="Active mobile number ex: +639********" name="mobile_no">
+                    <input type="text" class="form-control" id="age" placeholder="Active mobile number ex: +639********" name="mobile_no" required>
                 </div>
 
                 <style> /*for upload image section*/
@@ -141,20 +158,20 @@
                         }
                     });
                 </script>
-
+                
                 <div class="form-group">
-                    <label for="service">Select Service</label>
-                    <select class="form-control" id="service">
-                        <option>Medication</option>
-                        <option>Vitamins</option>
-                        <option>Supplements</option>
-                        <option>Immunization</option>
-                        <option>Medical Assistance</option>
-                        <option>Health Nutrition</option>
-                        <option>Health Education and Sessions</option>
-                        <option>Maternal Health</option>
-                        <option>Children's Health Monitoring</option>
-                    </select>
+                <label for="service">Select Service</label>
+                <select class="form-control" id="service" required>
+                <option>Medication</option>
+                <option>Vitamins</option>
+                <option>Supplements</option>
+                <option>Immunization</option>
+                <option>Medical Assistance</option>
+                <option>Health Nutrition</option>
+                <option>Health Education and Sessions</option>
+                <option>Maternal Health</option>
+                <option>Children's Health Monitoring</option>
+                </select>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>

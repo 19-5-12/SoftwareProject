@@ -15,6 +15,7 @@ else{
     $res_name = $_POST['res_name'];
     $address = $_POST['address'];
     $pref_date = $_POST['pref_date'];
+    $pref_time = $_POST['pref_time'];
     $bio_sex = $_POST['bio_sex'];
     $age = $_POST['age'];
     $mobile_no = $_POST['mobile_no'];
