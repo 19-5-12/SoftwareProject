@@ -12,7 +12,7 @@ Public Class Form3
             con.Open()
         End If
         Dim connect As String
-        connect = "select `name`, `address`, `age`, `gender` from roleinfo where userid= '" & user & "'"
+        connect = "select `name`, `birthday`, `email`, `contact` from roleinfo where userid= '" & user & "'"
         com = New MySqlCommand(connect, con)
         Dim read As MySqlDataReader = com.ExecuteReader
 
@@ -20,9 +20,9 @@ Public Class Form3
             Dim result = read("name").ToString()
             shadowname.Text = result
             shadowname.Refresh()
-            address.Text = read("address").ToString
-            age.Text = read("age").ToString
-            gender.Text = read("gender").ToString
+            address.Text = read("birthday").ToString
+            age.Text = read("email").ToString
+            gender.Text = read("contact").ToString
         Else
             MessageBox.Show("No information found for User ID: " & user)
         End If

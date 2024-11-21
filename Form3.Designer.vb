@@ -143,9 +143,9 @@ Partial Class Form3
         Me.gender.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gender.Location = New System.Drawing.Point(4, 190)
         Me.gender.Name = "gender"
-        Me.gender.Size = New System.Drawing.Size(70, 22)
+        Me.gender.Size = New System.Drawing.Size(105, 22)
         Me.gender.TabIndex = 3
-        Me.gender.Text = "Gender"
+        Me.gender.Text = "Contact No."
         '
         'age
         '
@@ -154,9 +154,9 @@ Partial Class Form3
         Me.age.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.age.Location = New System.Drawing.Point(4, 132)
         Me.age.Name = "age"
-        Me.age.Size = New System.Drawing.Size(42, 22)
+        Me.age.Size = New System.Drawing.Size(54, 22)
         Me.age.TabIndex = 2
-        Me.age.Text = "Age"
+        Me.age.Text = "Email"
         '
         'address
         '
@@ -167,7 +167,7 @@ Partial Class Form3
         Me.address.Name = "address"
         Me.address.Size = New System.Drawing.Size(76, 22)
         Me.address.TabIndex = 1
-        Me.address.Text = "Address"
+        Me.address.Text = "Birthday"
         '
         'shadowname
         '
